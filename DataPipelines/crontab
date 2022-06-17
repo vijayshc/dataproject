@@ -1,0 +1,1 @@
+0 1 * * * source /etc/profile;source ~/.bashrc;source ~/.profile;sh /mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/processdata.sh >> /mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/log/crontablog.log 2>&1

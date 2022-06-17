@@ -1,0 +1,310 @@
+2022-06-18 00:52:21 We have files to process. Proceeding to process
+dos2unix: converting file ./data/processing/dataset1_20220618005221.csv to Unix format...
+dos2unix: converting file ./data/processing/dataset2_20220618005221.csv to Unix format...
+2022-06-18 00:52:22 Submitting spark application
+22/06/18 00:52:24 WARN Utils: Your hostname, LAPTOP-6RUOV3KO resolves to a loopback address: 127.0.1.1; using 172.29.61.105 instead (on interface eth0)
+22/06/18 00:52:24 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+22/06/18 00:52:35 INFO SparkContext: Running Spark version 3.3.0
+22/06/18 00:52:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/06/18 00:52:36 INFO ResourceUtils: ==============================================================
+22/06/18 00:52:36 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/06/18 00:52:36 INFO ResourceUtils: ==============================================================
+22/06/18 00:52:36 INFO SparkContext: Submitted application: ETL_processor
+22/06/18 00:52:36 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/06/18 00:52:36 INFO ResourceProfile: Limiting resource is cpu
+22/06/18 00:52:36 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/06/18 00:52:36 INFO SecurityManager: Changing view acls to: dexter
+22/06/18 00:52:36 INFO SecurityManager: Changing modify acls to: dexter
+22/06/18 00:52:36 INFO SecurityManager: Changing view acls groups to: 
+22/06/18 00:52:36 INFO SecurityManager: Changing modify acls groups to: 
+22/06/18 00:52:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(dexter); groups with view permissions: Set(); users  with modify permissions: Set(dexter); groups with modify permissions: Set()
+22/06/18 00:52:36 INFO Utils: Successfully started service 'sparkDriver' on port 42043.
+22/06/18 00:52:36 INFO SparkEnv: Registering MapOutputTracker
+22/06/18 00:52:36 INFO SparkEnv: Registering BlockManagerMaster
+22/06/18 00:52:36 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/06/18 00:52:36 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/06/18 00:52:36 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/06/18 00:52:36 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-eeb4df5f-f792-4c46-b030-591d3c4f69c5
+22/06/18 00:52:36 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+22/06/18 00:52:36 INFO SparkEnv: Registering OutputCommitCoordinator
+22/06/18 00:52:36 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/06/18 00:52:36 INFO Executor: Starting executor ID driver on host 172.29.61.105
+22/06/18 00:52:36 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+22/06/18 00:52:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 32813.
+22/06/18 00:52:36 INFO NettyBlockTransferService: Server created on 172.29.61.105:32813
+22/06/18 00:52:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/06/18 00:52:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 172.29.61.105, 32813, None)
+22/06/18 00:52:36 INFO BlockManagerMasterEndpoint: Registering block manager 172.29.61.105:32813 with 434.4 MiB RAM, BlockManagerId(driver, 172.29.61.105, 32813, None)
+22/06/18 00:52:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 172.29.61.105, 32813, None)
+22/06/18 00:52:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 172.29.61.105, 32813, None)
+22/06/18 00:52:36 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+22/06/18 00:52:36 INFO SharedState: Warehouse path is 'file:/mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/spark-warehouse'.
+22/06/18 00:52:37 INFO InMemoryFileIndex: It took 65 ms to list leaf files for 1 paths.
+22/06/18 00:52:37 INFO InMemoryFileIndex: It took 21 ms to list leaf files for 2 paths.
+22/06/18 00:52:39 INFO FileSourceStrategy: Pushed Filters: 
+22/06/18 00:52:39 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+22/06/18 00:52:39 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+22/06/18 00:52:39 INFO CodeGenerator: Code generated in 75.2239 ms
+22/06/18 00:52:39 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 199.3 KiB, free 434.2 MiB)
+22/06/18 00:52:39 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.0 KiB, free 434.2 MiB)
+22/06/18 00:52:39 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.29.61.105:32813 (size: 34.0 KiB, free: 434.4 MiB)
+22/06/18 00:52:39 INFO SparkContext: Created broadcast 0 from csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:52:39 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/06/18 00:52:39 INFO SparkContext: Starting job: csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:52:39 INFO DAGScheduler: Got job 0 (csv at DirectMethodHandleAccessor.java:104) with 1 output partitions
+22/06/18 00:52:39 INFO DAGScheduler: Final stage: ResultStage 0 (csv at DirectMethodHandleAccessor.java:104)
+22/06/18 00:52:39 INFO DAGScheduler: Parents of final stage: List()
+22/06/18 00:52:39 INFO DAGScheduler: Missing parents: List()
+22/06/18 00:52:39 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at DirectMethodHandleAccessor.java:104), which has no missing parents
+22/06/18 00:52:39 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.8 KiB, free 434.2 MiB)
+22/06/18 00:52:39 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 434.2 MiB)
+22/06/18 00:52:39 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.29.61.105:32813 (size: 5.9 KiB, free: 434.4 MiB)
+22/06/18 00:52:39 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+22/06/18 00:52:39 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at DirectMethodHandleAccessor.java:104) (first 15 tasks are for partitions Vector(0))
+22/06/18 00:52:39 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+22/06/18 00:52:39 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (172.29.61.105, executor driver, partition 0, PROCESS_LOCAL, 4973 bytes) taskResourceAssignments Map()
+22/06/18 00:52:39 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+22/06/18 00:52:39 INFO FileScanRDD: Reading File path: file:///mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/processing/dataset1_20220618005221.csv, range: 0-130836, partition values: [empty row]
+22/06/18 00:52:39 INFO CodeGenerator: Code generated in 9.3618 ms
+22/06/18 00:52:39 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1534 bytes result sent to driver
+22/06/18 00:52:39 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 153 ms on 172.29.61.105 (executor driver) (1/1)
+22/06/18 00:52:39 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+22/06/18 00:52:39 INFO DAGScheduler: ResultStage 0 (csv at DirectMethodHandleAccessor.java:104) finished in 0.239 s
+22/06/18 00:52:39 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+22/06/18 00:52:39 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+22/06/18 00:52:39 INFO DAGScheduler: Job 0 finished: csv at DirectMethodHandleAccessor.java:104, took 0.267684 s
+22/06/18 00:52:39 INFO CodeGenerator: Code generated in 6.827 ms
+22/06/18 00:52:39 INFO FileSourceStrategy: Pushed Filters: 
+22/06/18 00:52:39 INFO FileSourceStrategy: Post-Scan Filters: 
+22/06/18 00:52:39 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+22/06/18 00:52:39 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 199.3 KiB, free 434.0 MiB)
+22/06/18 00:52:39 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.0 KiB, free 433.9 MiB)
+22/06/18 00:52:39 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.29.61.105:32813 (size: 34.0 KiB, free: 434.3 MiB)
+22/06/18 00:52:39 INFO SparkContext: Created broadcast 2 from csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:52:39 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+root
+ |-- name: string (nullable = true)
+ |-- price: string (nullable = true)
+
+22/06/18 00:52:40 INFO FileSourceStrategy: Pushed Filters: IsNotNull(name)
+22/06/18 00:52:40 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(name#17)
+22/06/18 00:52:40 INFO FileSourceStrategy: Output Data Schema: struct<name: string, price: string>
+22/06/18 00:52:40 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/06/18 00:52:40 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+22/06/18 00:52:40 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+22/06/18 00:52:40 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 172.29.61.105:32813 in memory (size: 34.0 KiB, free: 434.4 MiB)
+22/06/18 00:52:40 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 172.29.61.105:32813 in memory (size: 34.0 KiB, free: 434.4 MiB)
+22/06/18 00:52:40 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 172.29.61.105:32813 in memory (size: 5.9 KiB, free: 434.4 MiB)
+22/06/18 00:52:40 INFO CodeGenerator: Code generated in 18.1028 ms
+22/06/18 00:52:40 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 199.2 KiB, free 434.2 MiB)
+22/06/18 00:52:40 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 34.0 KiB, free 434.2 MiB)
+22/06/18 00:52:40 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.29.61.105:32813 (size: 34.0 KiB, free: 434.4 MiB)
+22/06/18 00:52:40 INFO SparkContext: Created broadcast 3 from csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:52:40 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/06/18 00:52:40 INFO SparkContext: Starting job: csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:52:40 INFO DAGScheduler: Got job 1 (csv at DirectMethodHandleAccessor.java:104) with 1 output partitions
+22/06/18 00:52:40 INFO DAGScheduler: Final stage: ResultStage 1 (csv at DirectMethodHandleAccessor.java:104)
+22/06/18 00:52:40 INFO DAGScheduler: Parents of final stage: List()
+22/06/18 00:52:40 INFO DAGScheduler: Missing parents: List()
+22/06/18 00:52:40 INFO DAGScheduler: Submitting ResultStage 1 (CoalescedRDD[13] at csv at DirectMethodHandleAccessor.java:104), which has no missing parents
+22/06/18 00:52:40 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 217.3 KiB, free 434.0 MiB)
+22/06/18 00:52:40 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 78.0 KiB, free 433.9 MiB)
+22/06/18 00:52:40 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 172.29.61.105:32813 (size: 78.0 KiB, free: 434.3 MiB)
+22/06/18 00:52:40 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1513
+22/06/18 00:52:40 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (CoalescedRDD[13] at csv at DirectMethodHandleAccessor.java:104) (first 15 tasks are for partitions Vector(0))
+22/06/18 00:52:40 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+22/06/18 00:52:40 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (172.29.61.105, executor driver, partition 0, PROCESS_LOCAL, 5374 bytes) taskResourceAssignments Map()
+22/06/18 00:52:40 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+22/06/18 00:52:40 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/06/18 00:52:40 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+22/06/18 00:52:40 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+22/06/18 00:52:40 INFO FileScanRDD: Reading File path: file:///mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/processing/dataset1_20220618005221.csv, range: 0-130836, partition values: [empty row]
+22/06/18 00:52:40 INFO CodeGenerator: Code generated in 8.3235 ms
+22/06/18 00:52:40 INFO CodeGenerator: Code generated in 4.9855 ms
+22/06/18 00:52:40 INFO FileScanRDD: Reading File path: file:///mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/processing/dataset2_20220618005221.csv, range: 0-130512, partition values: [empty row]
+22/06/18 00:52:40 INFO FileOutputCommitter: Saved output of task 'attempt_202206180052402914197007866951162_0001_m_000000_1' to file:/mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/out/20220618005221/_temporary/0/task_202206180052402914197007866951162_0001_m_000000
+22/06/18 00:52:40 INFO SparkHadoopMapRedUtil: attempt_202206180052402914197007866951162_0001_m_000000_1: Committed. Elapsed time: 58 ms.
+22/06/18 00:52:40 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2665 bytes result sent to driver
+22/06/18 00:52:40 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 565 ms on 172.29.61.105 (executor driver) (1/1)
+22/06/18 00:52:40 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+22/06/18 00:52:40 INFO DAGScheduler: ResultStage 1 (csv at DirectMethodHandleAccessor.java:104) finished in 0.595 s
+22/06/18 00:52:40 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+22/06/18 00:52:40 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+22/06/18 00:52:40 INFO DAGScheduler: Job 1 finished: csv at DirectMethodHandleAccessor.java:104, took 0.602965 s
+22/06/18 00:52:40 INFO FileFormatWriter: Start to commit write Job eb7ea7c7-18d5-418a-a8db-8ccb7ce913bd.
+22/06/18 00:52:41 INFO FileFormatWriter: Write Job eb7ea7c7-18d5-418a-a8db-8ccb7ce913bd committed. Elapsed time: 259 ms.
+22/06/18 00:52:41 INFO FileFormatWriter: Finished processing stats for write job eb7ea7c7-18d5-418a-a8db-8ccb7ce913bd.
+22/06/18 00:52:41 INFO SparkContext: Invoking stop() from shutdown hook
+22/06/18 00:52:41 INFO SparkUI: Stopped Spark web UI at http://172.29.61.105:4040
+22/06/18 00:52:41 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/06/18 00:52:41 INFO MemoryStore: MemoryStore cleared
+22/06/18 00:52:41 INFO BlockManager: BlockManager stopped
+22/06/18 00:52:41 INFO BlockManagerMaster: BlockManagerMaster stopped
+22/06/18 00:52:41 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/06/18 00:52:41 INFO SparkContext: Successfully stopped SparkContext
+22/06/18 00:52:41 INFO ShutdownHookManager: Shutdown hook called
+22/06/18 00:52:41 INFO ShutdownHookManager: Deleting directory /tmp/spark-4d5cd77a-88e9-4369-97e0-c7305b987a97
+22/06/18 00:52:41 INFO ShutdownHookManager: Deleting directory /tmp/spark-c0125261-a463-42e1-b682-de2f35be743b
+22/06/18 00:52:41 INFO ShutdownHookManager: Deleting directory /tmp/spark-c0125261-a463-42e1-b682-de2f35be743b/pyspark-89bf197b-7b4e-4d77-925a-77d3b4a49f0a
+2022-06-18 00:52:41 Taking output file and placing in out directory
+2022-06-18 00:52:41 Copied output file data/out/outputfile_20220618005221.csv
+2022-06-18 00:52:41 File processing succesfully completed. Archiving file
+  adding: dataset1_20220618005221.csv (deflated 55%)
+/mnt/c/Users/vijay/Desktop/Assessment/DataPipelines
+  adding: dataset2_20220618005221.csv (deflated 55%)
+/mnt/c/Users/vijay/Desktop/Assessment/DataPipelines
+2022-06-18 00:53:23 No files to process
+2022-06-18 00:53:37 We have files to process. Proceeding to process
+dos2unix: converting file ./data/processing/dataset1_20220618005337.csv to Unix format...
+dos2unix: converting file ./data/processing/dataset2_20220618005337.csv to Unix format...
+2022-06-18 00:53:37 Submitting spark application
+22/06/18 00:53:41 WARN Utils: Your hostname, LAPTOP-6RUOV3KO resolves to a loopback address: 127.0.1.1; using 172.29.61.105 instead (on interface eth0)
+22/06/18 00:53:41 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+22/06/18 00:53:52 INFO SparkContext: Running Spark version 3.3.0
+22/06/18 00:53:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/06/18 00:53:52 INFO ResourceUtils: ==============================================================
+22/06/18 00:53:52 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/06/18 00:53:52 INFO ResourceUtils: ==============================================================
+22/06/18 00:53:52 INFO SparkContext: Submitted application: ETL_processor
+22/06/18 00:53:52 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/06/18 00:53:52 INFO ResourceProfile: Limiting resource is cpu
+22/06/18 00:53:52 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/06/18 00:53:52 INFO SecurityManager: Changing view acls to: dexter
+22/06/18 00:53:52 INFO SecurityManager: Changing modify acls to: dexter
+22/06/18 00:53:52 INFO SecurityManager: Changing view acls groups to: 
+22/06/18 00:53:52 INFO SecurityManager: Changing modify acls groups to: 
+22/06/18 00:53:52 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(dexter); groups with view permissions: Set(); users  with modify permissions: Set(dexter); groups with modify permissions: Set()
+22/06/18 00:53:52 INFO Utils: Successfully started service 'sparkDriver' on port 45853.
+22/06/18 00:53:52 INFO SparkEnv: Registering MapOutputTracker
+22/06/18 00:53:52 INFO SparkEnv: Registering BlockManagerMaster
+22/06/18 00:53:52 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/06/18 00:53:52 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/06/18 00:53:52 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/06/18 00:53:52 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-8b05cc7e-43ce-425a-a69f-450fd456b7b7
+22/06/18 00:53:52 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+22/06/18 00:53:52 INFO SparkEnv: Registering OutputCommitCoordinator
+22/06/18 00:53:52 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/06/18 00:53:53 INFO Executor: Starting executor ID driver on host 172.29.61.105
+22/06/18 00:53:53 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+22/06/18 00:53:53 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46565.
+22/06/18 00:53:53 INFO NettyBlockTransferService: Server created on 172.29.61.105:46565
+22/06/18 00:53:53 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/06/18 00:53:53 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 172.29.61.105, 46565, None)
+22/06/18 00:53:53 INFO BlockManagerMasterEndpoint: Registering block manager 172.29.61.105:46565 with 434.4 MiB RAM, BlockManagerId(driver, 172.29.61.105, 46565, None)
+22/06/18 00:53:53 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 172.29.61.105, 46565, None)
+22/06/18 00:53:53 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 172.29.61.105, 46565, None)
+22/06/18 00:53:53 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+22/06/18 00:53:53 INFO SharedState: Warehouse path is 'file:/mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/spark-warehouse'.
+22/06/18 00:53:53 INFO InMemoryFileIndex: It took 75 ms to list leaf files for 1 paths.
+22/06/18 00:53:54 INFO InMemoryFileIndex: It took 28 ms to list leaf files for 2 paths.
+22/06/18 00:53:56 INFO FileSourceStrategy: Pushed Filters: 
+22/06/18 00:53:56 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+22/06/18 00:53:56 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+22/06/18 00:53:56 INFO CodeGenerator: Code generated in 117.8172 ms
+22/06/18 00:53:56 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 199.3 KiB, free 434.2 MiB)
+22/06/18 00:53:56 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.0 KiB, free 434.2 MiB)
+22/06/18 00:53:56 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.29.61.105:46565 (size: 34.0 KiB, free: 434.4 MiB)
+22/06/18 00:53:56 INFO SparkContext: Created broadcast 0 from csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:53:56 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/06/18 00:53:57 INFO SparkContext: Starting job: csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:53:57 INFO DAGScheduler: Got job 0 (csv at DirectMethodHandleAccessor.java:104) with 1 output partitions
+22/06/18 00:53:57 INFO DAGScheduler: Final stage: ResultStage 0 (csv at DirectMethodHandleAccessor.java:104)
+22/06/18 00:53:57 INFO DAGScheduler: Parents of final stage: List()
+22/06/18 00:53:57 INFO DAGScheduler: Missing parents: List()
+22/06/18 00:53:57 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at DirectMethodHandleAccessor.java:104), which has no missing parents
+22/06/18 00:53:57 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.8 KiB, free 434.2 MiB)
+22/06/18 00:53:57 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 434.2 MiB)
+22/06/18 00:53:57 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.29.61.105:46565 (size: 5.9 KiB, free: 434.4 MiB)
+22/06/18 00:53:57 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+22/06/18 00:53:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at DirectMethodHandleAccessor.java:104) (first 15 tasks are for partitions Vector(0))
+22/06/18 00:53:57 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+22/06/18 00:53:57 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (172.29.61.105, executor driver, partition 0, PROCESS_LOCAL, 4973 bytes) taskResourceAssignments Map()
+22/06/18 00:53:57 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+22/06/18 00:53:57 INFO FileScanRDD: Reading File path: file:///mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/processing/dataset1_20220618005337.csv, range: 0-130836, partition values: [empty row]
+22/06/18 00:53:57 INFO CodeGenerator: Code generated in 11.4736 ms
+22/06/18 00:53:57 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1534 bytes result sent to driver
+22/06/18 00:53:57 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 242 ms on 172.29.61.105 (executor driver) (1/1)
+22/06/18 00:53:57 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+22/06/18 00:53:57 INFO DAGScheduler: ResultStage 0 (csv at DirectMethodHandleAccessor.java:104) finished in 0.381 s
+22/06/18 00:53:57 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+22/06/18 00:53:57 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+22/06/18 00:53:57 INFO DAGScheduler: Job 0 finished: csv at DirectMethodHandleAccessor.java:104, took 0.430377 s
+22/06/18 00:53:57 INFO CodeGenerator: Code generated in 10.4315 ms
+22/06/18 00:53:57 INFO FileSourceStrategy: Pushed Filters: 
+22/06/18 00:53:57 INFO FileSourceStrategy: Post-Scan Filters: 
+22/06/18 00:53:57 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+22/06/18 00:53:57 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 199.3 KiB, free 434.0 MiB)
+22/06/18 00:53:57 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.0 KiB, free 433.9 MiB)
+22/06/18 00:53:57 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.29.61.105:46565 (size: 34.0 KiB, free: 434.3 MiB)
+22/06/18 00:53:57 INFO SparkContext: Created broadcast 2 from csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:53:57 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/06/18 00:53:57 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 172.29.61.105:46565 in memory (size: 5.9 KiB, free: 434.3 MiB)
+root
+ |-- name: string (nullable = true)
+ |-- price: string (nullable = true)
+
+22/06/18 00:53:58 INFO FileSourceStrategy: Pushed Filters: IsNotNull(name)
+22/06/18 00:53:58 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(name#17)
+22/06/18 00:53:58 INFO FileSourceStrategy: Output Data Schema: struct<name: string, price: string>
+22/06/18 00:53:58 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/06/18 00:53:58 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+22/06/18 00:53:58 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+22/06/18 00:53:58 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 172.29.61.105:46565 in memory (size: 34.0 KiB, free: 434.4 MiB)
+22/06/18 00:53:58 INFO CodeGenerator: Code generated in 32.2407 ms
+22/06/18 00:53:58 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 199.2 KiB, free 434.0 MiB)
+22/06/18 00:53:58 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 34.0 KiB, free 433.9 MiB)
+22/06/18 00:53:58 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.29.61.105:46565 (size: 34.0 KiB, free: 434.3 MiB)
+22/06/18 00:53:58 INFO SparkContext: Created broadcast 3 from csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:53:58 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/06/18 00:53:58 INFO SparkContext: Starting job: csv at DirectMethodHandleAccessor.java:104
+22/06/18 00:53:58 INFO DAGScheduler: Got job 1 (csv at DirectMethodHandleAccessor.java:104) with 1 output partitions
+22/06/18 00:53:58 INFO DAGScheduler: Final stage: ResultStage 1 (csv at DirectMethodHandleAccessor.java:104)
+22/06/18 00:53:58 INFO DAGScheduler: Parents of final stage: List()
+22/06/18 00:53:58 INFO DAGScheduler: Missing parents: List()
+22/06/18 00:53:58 INFO DAGScheduler: Submitting ResultStage 1 (CoalescedRDD[13] at csv at DirectMethodHandleAccessor.java:104), which has no missing parents
+22/06/18 00:53:58 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 217.3 KiB, free 433.7 MiB)
+22/06/18 00:53:58 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 77.9 KiB, free 433.7 MiB)
+22/06/18 00:53:58 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 172.29.61.105:46565 (size: 77.9 KiB, free: 434.3 MiB)
+22/06/18 00:53:58 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1513
+22/06/18 00:53:58 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (CoalescedRDD[13] at csv at DirectMethodHandleAccessor.java:104) (first 15 tasks are for partitions Vector(0))
+22/06/18 00:53:58 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+22/06/18 00:53:58 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (172.29.61.105, executor driver, partition 0, PROCESS_LOCAL, 5374 bytes) taskResourceAssignments Map()
+22/06/18 00:53:58 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+22/06/18 00:53:58 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/06/18 00:53:58 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+22/06/18 00:53:58 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+22/06/18 00:53:59 INFO FileScanRDD: Reading File path: file:///mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/processing/dataset1_20220618005337.csv, range: 0-130836, partition values: [empty row]
+22/06/18 00:53:59 INFO CodeGenerator: Code generated in 16.0039 ms
+22/06/18 00:53:59 INFO CodeGenerator: Code generated in 7.7205 ms
+22/06/18 00:53:59 INFO FileScanRDD: Reading File path: file:///mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/processing/dataset2_20220618005337.csv, range: 0-130512, partition values: [empty row]
+22/06/18 00:54:00 INFO FileOutputCommitter: Saved output of task 'attempt_202206180053588741212825726590595_0001_m_000000_1' to file:/mnt/c/Users/vijay/Desktop/Assessment/DataPipelines/data/out/20220618005337/_temporary/0/task_202206180053588741212825726590595_0001_m_000000
+22/06/18 00:54:00 INFO SparkHadoopMapRedUtil: attempt_202206180053588741212825726590595_0001_m_000000_1: Committed. Elapsed time: 191 ms.
+22/06/18 00:54:00 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2665 bytes result sent to driver
+22/06/18 00:54:00 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 1762 ms on 172.29.61.105 (executor driver) (1/1)
+22/06/18 00:54:00 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+22/06/18 00:54:00 INFO DAGScheduler: ResultStage 1 (csv at DirectMethodHandleAccessor.java:104) finished in 1.807 s
+22/06/18 00:54:00 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+22/06/18 00:54:00 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+22/06/18 00:54:00 INFO DAGScheduler: Job 1 finished: csv at DirectMethodHandleAccessor.java:104, took 1.820987 s
+22/06/18 00:54:00 INFO FileFormatWriter: Start to commit write Job 3541db3d-9a0f-4218-b00d-d3825df3e9a0.
+22/06/18 00:54:01 INFO FileFormatWriter: Write Job 3541db3d-9a0f-4218-b00d-d3825df3e9a0 committed. Elapsed time: 814 ms.
+22/06/18 00:54:01 INFO FileFormatWriter: Finished processing stats for write job 3541db3d-9a0f-4218-b00d-d3825df3e9a0.
+22/06/18 00:54:01 INFO SparkContext: Invoking stop() from shutdown hook
+22/06/18 00:54:01 INFO SparkUI: Stopped Spark web UI at http://172.29.61.105:4040
+22/06/18 00:54:01 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/06/18 00:54:01 INFO MemoryStore: MemoryStore cleared
+22/06/18 00:54:01 INFO BlockManager: BlockManager stopped
+22/06/18 00:54:01 INFO BlockManagerMaster: BlockManagerMaster stopped
+22/06/18 00:54:01 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/06/18 00:54:01 INFO SparkContext: Successfully stopped SparkContext
+22/06/18 00:54:01 INFO ShutdownHookManager: Shutdown hook called
+22/06/18 00:54:01 INFO ShutdownHookManager: Deleting directory /tmp/spark-c63b0e7e-d3e5-4ac5-bb62-60130673f61f
+22/06/18 00:54:01 INFO ShutdownHookManager: Deleting directory /tmp/spark-f2c95170-ed4a-436d-8df0-876915073b81
+22/06/18 00:54:01 INFO ShutdownHookManager: Deleting directory /tmp/spark-f2c95170-ed4a-436d-8df0-876915073b81/pyspark-8d4a536c-2adb-4771-a45e-a42bd04d0556
+2022-06-18 00:54:01 Taking output file and placing in out directory
+2022-06-18 00:54:01 Copied output file data/out/outputfile_20220618005337.csv
+2022-06-18 00:54:01 File processing succesfully completed. Archiving file
+  adding: dataset1_20220618005337.csv (deflated 55%)
+/mnt/c/Users/vijay/Desktop/Assessment/DataPipelines
+  adding: dataset2_20220618005337.csv (deflated 55%)
+/mnt/c/Users/vijay/Desktop/Assessment/DataPipelines

@@ -1,0 +1,5 @@
+2022-06-18 00:52:21 We have files to process. Proceeding to process
+2022-06-18 00:52:22 Submitting spark application
+2022-06-18 00:52:41 Taking output file and placing in out directory
+2022-06-18 00:52:41 Copied output file data/out/outputfile_20220618005221.csv
+2022-06-18 00:52:41 File processing succesfully completed. Archiving file
